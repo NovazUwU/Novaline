@@ -1,0 +1,14 @@
+local Scripts = {
+    ["PJS"] = "https://api.luarmor.net/files/v3/loaders/f685c1fee9eca0354d397bc5b0051993.lua",
+    ["AWTD"] = "https://api.luarmor.net/files/v3/loaders/4ff8cf9127cf4fe8893774bbccd25a20.lua",
+    ["WD"] = "https://api.luarmor.net/files/v3/loaders/0e2dd0259981174fe0b64756e72cb9f1.lua"
+}
+
+local Text = "Invalid Script Name: PJS|AWTD|WD"
+
+local Found = Scripts[script_name]
+if Found then 
+    loadstring(game:HttpGet(Found))()
+else 
+    game.Players.LocalPlayer:Kick(Text)
+end 
